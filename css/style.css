@@ -1,0 +1,38 @@
+:root{
+    --color-principal: #3A525D;
+    --color-secondary: #0078A3;
+    --color-white: #fff;
+}
+li{
+    list-style: none;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-principal);
+    height: 5rem;
+    text-align: center;
+    justify-content:right;
+    padding-inline: 3rem;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 12rem;
+}
+a{
+    text-decoration: none;
+    font-style: none;
+    font-size: 1.5rem;
+    color: var(--color-white);
+}
+
+.store,
+.library,
+.account{
+    background-color: var(--color-secondary);
+}
