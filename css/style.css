@@ -8,7 +8,10 @@ li{
 }
 html {
     box-sizing: border-box;
-    font-size: 62.5%
+    font-size: 62.5%;
+}
+body{
+    background-color: #1E1E1E;
 }
 header{
     display: flex;
@@ -39,4 +42,18 @@ a{
     border-radius: 1.7rem;
     align-content: center ;
     justify-content: center;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 3fr, 1fr;
+    row-gap: 1rem;
+    column-gap: 0.5rem;
+    padding: 2.5rem;
+}
+
+section .games_row :nth-child(){
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-principal);
 }
