@@ -51,9 +51,3 @@ section{
     column-gap: 0.5rem;
     padding: 2.5rem;
 }
-
-section .games_row :nth-child(){
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-principal);
-}
