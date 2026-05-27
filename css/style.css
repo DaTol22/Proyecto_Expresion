@@ -179,3 +179,272 @@ a {
     font-weight: 900;
     cursor: pointer;
 }
+
+.biblioteca-layout {
+            display: grid;
+            grid-template-columns: 28rem 1fr;
+            height: calc(100vh - 6.5rem);
+            overflow: hidden;
+        }
+
+        /* ---- Sidebar izquierdo ---- */
+        .biblioteca-sidebar {
+            background-color: #0F1E2B;
+            border-right: 1px solid #1E3347;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .biblioteca-tabs {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+            margin: 0;
+            border-bottom: 1px solid #1E3347;
+        }
+
+        .biblioteca-tabs li {
+            list-style: none;
+        }
+
+        .biblioteca-tab {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.4rem 2rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #7A9BAD;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+            text-decoration: none;
+            letter-spacing: 0.05rem;
+        }
+
+        .biblioteca-tab:hover {
+            background-color: #152535;
+            color: var(--color-white);
+        }
+
+        .biblioteca-tab.active {
+            background-color: #152535;
+            color: var(--color-white);
+            border-left-color: var(--color-secondary);
+        }
+
+        .biblioteca-tab svg {
+            width: 1.8rem;
+            height: 1.8rem;
+            flex-shrink: 0;
+            opacity: 0.8;
+        }
+
+        /* Lista de juegos en sidebar */
+        .games-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem 0;
+            margin: 0;
+            scrollbar-width: thin;
+            scrollbar-color: #1E3347 transparent;
+        }
+
+        .games-list::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .games-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .games-list::-webkit-scrollbar-thumb {
+            background-color: #1E3347;
+            border-radius: 2px;
+        }
+
+        .game-list-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 0.9rem 2rem;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .game-list-item:hover {
+            background-color: #152535;
+        }
+
+        .game-list-item.selected {
+            background-color: #1A3148;
+        }
+
+        .game-icon-placeholder {
+            width: 3.2rem;
+            height: 3.2rem;
+            background-color: #1E3A52;
+            border-radius: 0.4rem;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Icono genérico SVG de gamepad */
+        .game-icon-placeholder svg {
+            width: 2rem;
+            height: 2rem;
+            color: #3A6480;
+        }
+
+        .game-list-name {
+            font-size: 1.4rem;
+            color: #C0D4DF;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* ---- Panel derecho ---- */
+        .biblioteca-main {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: var(--color-bg);
+        }
+
+        /* Tabs superiores: A-Z / Favoritos / Lista de Deseos */
+        .biblioteca-top-tabs {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            padding: 0 3rem;
+            background-color: #0F1E2B;
+            border-bottom: 1px solid #1E3347;
+            margin: 0;
+            flex-shrink: 0;
+        }
+
+        .top-tab {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1.6rem 2.2rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #5C7E90;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+            text-decoration: none;
+            letter-spacing: 0.04rem;
+            text-transform: uppercase;
+        }
+
+        .top-tab:hover {
+            color: #C0D4DF;
+        }
+
+        .top-tab.active {
+            color: var(--color-white);
+            border-bottom-color: var(--color-secondary);
+        }
+
+        .top-tab svg {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+
+        /* Grid de miniaturas */
+        .thumbnails-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2.5rem 3rem;
+            scrollbar-width: thin;
+            scrollbar-color: #1E3347 transparent;
+        }
+
+        .thumbnails-area::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .thumbnails-area::-webkit-scrollbar-thumb {
+            background-color: #1E3347;
+            border-radius: 2px;
+        }
+
+        .thumbnails-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        /* Cada miniatura de juego */
+        .game-thumbnail {
+            aspect-ratio: 16/9;
+            background-color: #152535;
+            border-radius: 0.6rem;
+            overflow: hidden;
+            border: 1px solid #1E3347;
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .game-thumbnail:hover {
+            transform: scale(1.03);
+            border-color: var(--color-secondary);
+        }
+
+        /* Ícono placeholder dentro de cada miniatura */
+        .thumbnail-icon {
+            width: 5rem;
+            height: 5rem;
+            color: #2A4A60;
+        }
+
+        /* Número de slot visible en placeholder */
+        .thumbnail-label {
+            position: absolute;
+            bottom: 0.8rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #3A6480;
+            font-weight: 700;
+            letter-spacing: 0.05rem;
+        }
+
+        /* Botón de ayuda flotante */
+        .help-float {
+            position: fixed;
+            bottom: 3rem;
+            right: 3rem;
+            width: 5.5rem;
+            height: 5.5rem;
+            background-color: #577D90;
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 900;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+            transition: background 0.2s;
+        }
+
+        .help-float:hover {
+            background-color: var(--color-secondary);
+        }
