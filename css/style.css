@@ -1,0 +1,53 @@
+:root{
+    --color-principal: #3A525D;
+    --color-secondary: #0078A3;
+    --color-white: #fff;
+}
+li{
+    list-style: none;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    background-color: #1E1E1E;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-principal);
+    height: 6.5rem;
+    text-align: center;
+    justify-content:right;
+    padding: 1.5rem;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+a{
+    text-decoration: none;
+    font-style: none;
+    font-size: 2.3rem;
+    color: var(--color-white);
+}
+
+.store,
+.library,
+.account{
+    background-color: var(--color-secondary);
+    padding-inline: 4rem;
+    border-radius: 1.7rem;
+    align-content: center ;
+    justify-content: center;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 3fr, 1fr;
+    row-gap: 1rem;
+    column-gap: 0.5rem;
+    padding: 2.5rem;
+}
