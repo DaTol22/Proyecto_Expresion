@@ -25,7 +25,7 @@ body {
     min-height: 100vh; 
 }
 
-/* ===================== HEADER ===================== */
+/*HEADER*/
 
 .header {
     display: flex;
@@ -91,7 +91,7 @@ body {
     color: inherit;
 }
 
-/* ===================== LAYOUT BASE ===================== */
+/*LAYOUT BASE*/
 
 .layout-main {
     display: flex;
@@ -127,15 +127,13 @@ main {
     display: flex;
     width: max-content; 
     animation: sidemove 20s linear infinite;
-    animation-play-state: paused; /* Quieto al cargar la página */
+    animation-play-state: 
 }
 
-/* Activa la animación al pasar el cursor */
 .content .home-games-row:hover .carrusel-track {
     animation-play-state: running;
 }
 
-/* Formato horizontal para las imágenes */
 .itemCarrousel {
     flex-shrink: 0; 
     width: 325px;  
@@ -169,9 +167,7 @@ footer{
     height: 2.2rem;
 }
 
-/*HECHO POR ALEJO*/
-
-/* ===================== SIDEBAR ===================== */
+/* SIDEBAR */
 
 .sidebar-title {
     font-size: 1.4rem;
@@ -219,7 +215,7 @@ footer{
     border-radius: 0.4rem;
 }
 
-/* ===================== GAME CARD ===================== */
+/*GAME CARD  */
 
 .game-card {
     background-color: #1e3a5f;
@@ -234,7 +230,7 @@ footer{
     display: block;
 }
 
-/* ===================== SECTION TITLE ===================== */
+/*  SECTION TITLE */
 
 .section-title {
     display: flex;
@@ -250,7 +246,7 @@ footer{
     height: 2rem;
 }
 
-/* ===================== HELP BUTTON ===================== */
+/* HELP BUTTON  */
 
 .help-btn {
     position: fixed;
@@ -269,7 +265,7 @@ footer{
     cursor: pointer;
 }
 
-/* ===================== BUTTONS ===================== */
+/* BUTTONS */
 
 .btn {
     background-color: #1e3a5f;
@@ -284,9 +280,7 @@ footer{
 .btn:hover {
     background-color: #2a5a8f;
 }
-/* ============================================================
-   PANTALLA 1 - HOME (index.html)
-   ============================================================ */
+/* INDEX*/
 
 .home-banner {
     display: flex;
@@ -318,7 +312,7 @@ footer{
 
 .home-banner-info {
     width: 35rem;
-    height: 45rem; /* 💡 CLAVE: Sincroniza la altura con el banner principal */
+    height: 45rem; 
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -337,16 +331,14 @@ footer{
     height: 100%;
     object-fit: cover; 
     display: block;
-    transition: transform 0.5s ease; /* Transición suave para las imágenes de la derecha */
+    transition: transform 0.5s ease;
 }
 
 .home-banner-info-box:hover img {
     transform: scale(1.1);
 }
 
-/* ============================================================
-   PANTALLA 2 - PERFIL (perfil.html) - CORREGIDO PARA EL BOCETO
-   ============================================================ */
+/* PERFIL*/
 
 .perfil-layout {
     display: flex;
@@ -354,7 +346,7 @@ footer{
 }
 
 .perfil-sidebar {
-    width: 100%; /* Se adapta al contenedor sin desbordar */
+    width: 100%; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -408,7 +400,7 @@ footer{
 
 .logro-item {
     width: 100%;
-    aspect-ratio: 1; /* Mantiene círculos perfectos sin importar la resolución */
+    aspect-ratio: 1; 
     background-color: #1e3a5f;
     border-radius: 50%;
     overflow: hidden;
@@ -448,7 +440,6 @@ footer{
     font-weight: bold;
 }
 
-/* Línea indicadora de pestaña seleccionada del boceto */
 .perfil-tab.active::after {
     content: '';
     position: absolute;
@@ -464,7 +455,6 @@ footer{
     height: 1.8rem;
 }
 
-/* Tarjetas de Posts Uniformes */
 .perfil-post {
     background-color: #1e3a5f;
     border-radius: 1rem;
@@ -483,7 +473,7 @@ footer{
     width: 4rem;
     height: 4rem;
     background-color: #2a4a70;
-    border-radius: 50%; /* Cambiado a circular para armonía visual */
+    border-radius: 50%; 
     overflow: hidden;
 }
 
@@ -511,7 +501,6 @@ footer{
     margin-top: 1.5rem;
 }
 
-/* 💡 CORRECCIÓN: Botones visibles dentro de las tarjetas del perfil */
 .btn-perfil {
     background-color: #2a4a70 !important; 
     border: 1px solid #0078A3 !important;
@@ -521,7 +510,6 @@ footer{
     background-color: #0078A3 !important;
 }
 
-/* 💡 CORRECCIÓN: Imagen expandida del Post 4 */
 .perfil-post-image {
     width: 100%;
     height: 24rem;
@@ -536,19 +524,15 @@ footer{
     height: 100%;
     object-fit: cover;
 }
-/* ============================================================
-   DISEÑO DE LA TIENDA (ESTRUCTURA DE 3 COLUMNAS DEL BOCETO)
-   ============================================================ */
+/* TIENDA*/
 
-/* Contenedor general en 3 columnas */
 .tienda-layout {
     display: grid;
-    grid-template-columns: 25rem 1fr 22rem; /* Sidebar, Tendencias (flexible), Ofertas */
+    grid-template-columns: 25rem 1fr 22rem; 
     gap: 2.5rem;
     padding: 2rem;
 }
 
-/* Títulos de las secciones */
 .section-title-box {
     display: flex;
     align-items: center;
@@ -561,7 +545,6 @@ footer{
     padding-bottom: 0.8rem;
 }
 
-/* --- SECCIÓN CENTRAL: TENDENCIAS --- */
 .tienda-central {
     display: flex;
     flex-direction: column;
@@ -569,7 +552,7 @@ footer{
 
 .tienda-central .tienda-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas de juegos grandes */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
@@ -592,9 +575,8 @@ footer{
     transform: scale(1.05);
 }
 
-/* --- SECCIÓN DERECHA: OFERTAS --- */
 .tienda-ofertas-sidebar {
-    background-color: var(--color-secondary); /* Fondo ligeramente oscuro para dar separación */
+    background-color: var(--color-secondary);
     padding: 1.5rem;
     border-radius: 1rem;
     display: flex;
@@ -612,7 +594,7 @@ footer{
 }
 
 .game-card-oferta {
-    height: 10rem; /* Más pequeños y verticales como tu boceto */
+    height: 10rem;
     border-radius: 0.8rem;
     overflow: hidden;
     background-color: var(--color-bg);
@@ -629,19 +611,15 @@ footer{
 .game-card-oferta:hover img {
     transform: scale(1.1);
 }
-/* ============================================================
-   DISEÑO DE LA BIBLIOTECA (ESTRUCTURA DE 3 COLUMNAS)
-   ============================================================ */
+/* BIBLIOTECA*/
 
-/* Contenedor principal que alinea las 3 columnas en la pantalla */
 .biblioteca-layout {
     display: grid;
-    grid-template-columns: 25rem 1fr 22rem; /* Sidebar, Favoritos (flexible), Lista de deseos */
+    grid-template-columns: 25rem 1fr 22rem;
     gap: 2.5rem;
     padding: 2rem;
 }
 
-/* --- COLUMNA IZQUIERDA: SIDEBAR DE JUEGOS --- */
 .biblioteca-sidebar-list {
     list-style: none;
     display: flex;
@@ -663,7 +641,6 @@ footer{
     height: 3.2rem;
 }
 
-/* --- COLUMNA CENTRAL: FAVORITOS --- */
 .biblioteca-central {
     display: flex;
     flex-direction: column;
@@ -671,14 +648,14 @@ footer{
 
 .biblioteca-central .biblioteca-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Rejilla de 2 columnas de juegos */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
 .biblioteca-central .game-card {
     height: 14rem;
     width: 100%;
-    overflow: hidden; /* Mantiene el zoom de la animación dentro de los bordes */
+    overflow: hidden;
     border-radius: 1rem;
     background-color: #1e3a5f;
 }
@@ -691,14 +668,12 @@ footer{
     transition: transform 0.2s ease;
 }
 
-/* Animación individual para las imágenes de Favoritos */
 .biblioteca-central .game-card:hover img {
     transform: scale(1.05);
 }
 
-/* --- COLUMNA DERECHA: LISTA DE DESEOS --- */
 .biblioteca-deseos-sidebar {
-    background-color: #162033; /* Fondo oscuro idéntico al sidebar de ofertas */
+    background-color: #162033; 
     padding: 1.5rem;
     border-radius: 1rem;
     display: flex;
@@ -712,7 +687,7 @@ footer{
 }
 
 .game-card-deseo {
-    height: 10rem; /* Formato vertical compacto */
+    height: 10rem; 
     border-radius: 0.8rem;
     overflow: hidden;
     background-color: #1e3a5f;
@@ -726,14 +701,11 @@ footer{
     transition: transform 0.2s ease;
 }
 
-/* Animación individual para las imágenes de Lista de deseos */
 .game-card-deseo:hover img {
     transform: scale(1.1);
 }
 
-/* ============================================================
-   PANTALLA 5 - DETALLE DE JUEGO (detalle.html)
-   ============================================================ */
+/*PANTALLA DE JUEGO*/
 
 .gif-main {
     width: 100%;
