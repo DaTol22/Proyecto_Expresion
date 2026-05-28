@@ -1,3 +1,72 @@
+@media (max-width: 1200px) {
+
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .header-logo h1 {
+        font-size: 3rem;
+    }
+
+    .header-logo img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .header-nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-nav-list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tienda-layout,
+    .biblioteca-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .home-banner {
+        flex-direction: column;
+        height: auto;
+        margin-inline: 1rem;
+    }
+
+    .home-banner-info {
+        width: 100%;
+        height: auto;
+    }
+
+    .tienda-central .tienda-grid,
+    .biblioteca-central .biblioteca-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-layout {
+        flex-direction: column;
+    }
+
+    .perfil-tabs {
+        gap: 1.5rem;
+    }
+
+    .detalle-info {
+        flex-direction: column;
+    }
+
+    .detalle-info-left {
+        width: 100%;
+    }
+}
+
 :root {
     --color-principal: #3A525D;
     --color-secondary: #0078A3;
@@ -31,8 +100,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #162033;
+    background-color: var(--color-principal);
     padding: 1rem 2rem;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
 }
 
 .header-logo {
@@ -47,8 +121,9 @@ body {
 }
 
 .header-logo h1 {
-    font-size: 2.4rem;
+    font-size: 5rem;
     color: white;
+    font-family: 'Jaro', sans-serif;
 }
 
 .header-nav {
@@ -59,7 +134,7 @@ body {
 .header-nav a {
     text-decoration: none;
     color: white;
-    background-color: #1e3a5f;
+    background-color: var(--color-secondary);
     padding: 0.8rem 2rem;
     border-radius: 2rem;
     font-size: 1.4rem;
