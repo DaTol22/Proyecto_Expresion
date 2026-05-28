@@ -20,6 +20,9 @@ body {
     background-color: #0f1b2d;
     color: white;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
 /* ===================== HEADER ===================== */
@@ -69,36 +72,40 @@ body {
 }
 
 .header-nav-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 1rem;
-      }
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
 
-      .header-nav-list li a {
-        display: inline-block;
-        padding: 1.75rem 2rem;
-        border-radius: 1rem;
-        text-decoration: none;
-        
-      }
+.header-nav-list li a {
+    display: inline-block;
+    padding: 1.75rem 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+}
 
-      .header-nav-list li a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: inherit;
-      }
+.header-nav-list li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: inherit;
+}
 
 /* ===================== LAYOUT BASE ===================== */
 
 .layout-main {
     display: flex;
-    min-height: calc(100vh - 6rem);
+    flex: 1;
+}
+
+main {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar {
     width: 18rem;
-    background-color: #162033;
     padding: 2rem;
     flex-shrink: 0;
 }
@@ -108,10 +115,9 @@ body {
     padding: 2rem;
 }
 
-
 .content .home-games-row {
     position: relative;
-    max-width: 100%; 
+    max-width: 95%; 
     margin: auto;
     overflow: hidden; 
     background-color: var(--color-bg); 
@@ -120,7 +126,7 @@ body {
 .content .home-games-row .carrusel-track {
     display: flex;
     width: max-content; 
-    animation: barraInfinitaHorizontal 20s linear infinite;
+    animation: sidemove 20s linear infinite;
     animation-play-state: paused; /* Quieto al cargar la página */
 }
 
@@ -133,7 +139,7 @@ body {
 .itemCarrousel {
     flex-shrink: 0; 
     width: 325px;  
-    height: 190px; 
+    height: 200px; 
     padding: 0 20px; 
     box-sizing: border-box;
 }
@@ -145,7 +151,7 @@ body {
     border-radius: 10px; 
 }
 
-@keyframes barraInfinitaHorizontal {
+@keyframes sidemove {
     0% {
         transform: translateX(0); 
     }
@@ -157,9 +163,10 @@ body {
 footer{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:center;
     background-color: var(--color-secondary);
-    padding: 1rem 2rem;
+    padding: 0.5rem;
+    height: 2.2rem;
 }
 
 /*HECHO POR ALEJO*/
@@ -277,21 +284,21 @@ footer{
 .btn:hover {
     background-color: #2a5a8f;
 }
-
 /* ============================================================
    PANTALLA 1 - HOME (index.html)
    ============================================================ */
 
 .home-banner {
     display: flex;
-    flex-direction: columnyy;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-inline: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    height: 45rem;
 }
 
 .home-banner-featured {
     flex: 1;
-    height: 30rem;
     background-color: #1e3a5f;
     border-radius: 1rem;
     overflow: hidden;
@@ -301,34 +308,44 @@ footer{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block; 
+}
+
+.home-banner-featured:hover img {
+    transform: scale(1.1); 
 }
 
 .home-banner-info {
     width: 35rem;
+    height: 45rem; /* 💡 CLAVE: Sincroniza la altura con el banner principal */
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .home-banner-info-box {
     flex: 1;
-    background-color: #1e3a5f;
+    background-color: var(--color-bg);
     border-radius: 0.8rem;
-    padding: 1.5rem;
+    overflow: hidden; 
+    position: relative;
 }
 
-.home-games-row {
-    display: flex;
-    gap: 1.5rem;
+.home-banner-info-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.5s ease; /* Transición suave para las imágenes de la derecha */
 }
 
-.home-games-row .game-card {
-    flex: 1;
-    height: 15rem;
+.home-banner-info-box:hover img {
+    transform: scale(1.1);
 }
 
 /* ============================================================
-   PANTALLA 2 - PERFIL (perfil.html)
+   PANTALLA 2 - PERFIL (perfil.html) - CORREGIDO PARA EL BOCETO
    ============================================================ */
 
 .perfil-layout {
@@ -337,11 +354,11 @@ footer{
 }
 
 .perfil-sidebar {
-    width: 16rem;
+    width: 100%; /* Se adapta al contenedor sin desbordar */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .perfil-avatar {
@@ -359,35 +376,39 @@ footer{
 }
 
 .perfil-username {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: white;
+    font-weight: bold;
 }
 
 .perfil-info-label {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #aabbcc;
 }
 
 .perfil-logros {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     width: 100%;
 }
 
 .perfil-logros h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: white;
     margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
 }
 
 .logros-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.8rem;
+    width: 100%;
 }
 
 .logro-item {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 100%;
+    aspect-ratio: 1; /* Mantiene círculos perfectos sin importar la resolución */
     background-color: #1e3a5f;
     border-radius: 50%;
     overflow: hidden;
@@ -418,6 +439,24 @@ footer{
     color: #aabbcc;
     font-size: 1.4rem;
     cursor: pointer;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.perfil-tab.active {
+    color: white;
+    font-weight: bold;
+}
+
+/* Línea indicadora de pestaña seleccionada del boceto */
+.perfil-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1.2rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0078A3;
 }
 
 .perfil-tab img {
@@ -425,25 +464,26 @@ footer{
     height: 1.8rem;
 }
 
+/* Tarjetas de Posts Uniformes */
 .perfil-post {
     background-color: #1e3a5f;
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
     margin-bottom: 1.5rem;
 }
 
 .perfil-post-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .perfil-post-avatar {
     width: 4rem;
     height: 4rem;
     background-color: #2a4a70;
-    border-radius: 0.5rem;
+    border-radius: 50%; /* Cambiado a circular para armonía visual */
     overflow: hidden;
 }
 
@@ -456,9 +496,10 @@ footer{
 .perfil-post-name {
     font-size: 1.4rem;
     color: white;
+    font-weight: bold;
 }
 
-.perfil-post p {
+.perfil-post-text {
     font-size: 1.3rem;
     color: #ccddeeff;
     line-height: 1.6;
@@ -467,15 +508,27 @@ footer{
 .perfil-post-actions {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
+/* 💡 CORRECCIÓN: Botones visibles dentro de las tarjetas del perfil */
+.btn-perfil {
+    background-color: #2a4a70 !important; 
+    border: 1px solid #0078A3 !important;
+}
+
+.btn-perfil:hover {
+    background-color: #0078A3 !important;
+}
+
+/* 💡 CORRECCIÓN: Imagen expandida del Post 4 */
 .perfil-post-image {
-    width: 4rem;
-    height: 4rem;
+    width: 100%;
+    height: 24rem;
     background-color: #2a4a70;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     overflow: hidden;
+    margin-top: 1.2rem;
 }
 
 .perfil-post-image img {
@@ -483,7 +536,6 @@ footer{
     height: 100%;
     object-fit: cover;
 }
-
 /* ============================================================
    PANTALLA 3 - TIENDA (tienda.html)
    ============================================================ */
