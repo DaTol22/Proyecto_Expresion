@@ -5,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
     <title>Axis - Biblioteca</title>
   </head>
 
-  <body>
-
-    <header class="header">
+  <header class="header">
       <div class="header-logo">
         <img src="img/Gemini_Generated_Image_lyifvlyifvlyifvl-removebg-preview.png" alt="Logo Axis" />
         <h1>AXIS</h1>
@@ -23,70 +18,46 @@
           <li><a href="#">TIENDA</a></li>
           <li><a href="#">BIBLIOTECA</a></li>
           <li><a href="#">PERFIL</a></li>
-          <li class="header-search-item"><a href="#"><div class="header-search">
+          <li><a href="#"><div class="header-search">
         <img src="img/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Buscar" />
       </div></a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="layout-main">
+  <body>
+    <main class="layout-main biblioteca-layout">
 
-      <!-- Sidebar: ordenamiento y lista de juegos -->
       <aside class="sidebar">
         <p class="sidebar-title">Juegos (A a la Z)</p>
         <ul class="biblioteca-sidebar-list">
           <li>
             <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
-            Minecraft
+            <h2>Minecraft</h2>
           </li>
           <li>
             <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
-            Minecraft
+            <h2>Minecraft</h2>
           </li>
           <li>
             <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
-            Minecraft
+            <h2>Minecraft</h2>
           </li>
           <li>
             <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
-            Minecraft
+            <h2>Minecraft</h2>
           </li>
           <li>
             <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
-            Minecraft
-          </li>
-          <li>
-            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
-            Minecraft
-          </li>
-          <li>
-            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
-            Minecraft
-          </li>
-          <li>
-            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
-            Minecraft
-          </li>
-          <li>
-            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
-            Minecraft
+            <h2>Minecraft</h2>
           </li>
         </ul>
       </aside>
 
-      <!-- Contenido: favoritos y lista de deseos -->
-      <div class="content">
-
-        <div class="biblioteca-header">
-          <div class="section-title">
-            <img src="img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Favoritos icono" />
-            <span>FAVORITOS</span>
-          </div>
-          <div class="biblioteca-header-right">
-            <img src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Lista de deseos icono" />
-            <span>LISTA DE DESEOS</span>
-          </div>
+      <section class="biblioteca-central">
+        <div class="section-title-box">
+          <img src="img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Favoritos icono" />
+          <span>FAVORITOS</span>
         </div>
 
         <div class="biblioteca-grid">
@@ -96,11 +67,22 @@
           <div class="game-card"><img src="img/game-3.jpg" alt="Juego 4" /></div>
           <div class="game-card"><img src="img/game-4.jpg" alt="Juego 5" /></div>
           <div class="game-card"><img src="img/game-7.webp" alt="Juego 6" /></div>
-          <div class="game-card"><img src="img/game-6.png" alt="Juego 7" /></div>
-          <div class="game-card"><img src="img/game-8.jpg" alt="Juego 8" /></div>
+        </div>
+      </section>
+
+      <aside class="biblioteca-deseos-sidebar">
+        <div class="section-title-box">
+          <img src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Lista de deseos icono" />
+          <span>LISTA DE DESEOS</span>
         </div>
 
-      </div>
+        <div class="deseos-lista">
+          <div class="game-card-deseo"><img src="img/game-6.png" alt="Deseo 1" /></div>
+          <div class="game-card-deseo"><img src="img/game-8.jpg" alt="Deseo 2" /></div>
+          <div class="game-card-deseo"><img src="img/game-2.webp" alt="Deseo 3" /></div>
+        </div>
+      </aside>
+
     </main>
 
     <div class="help-btn">?</div>

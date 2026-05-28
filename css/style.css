@@ -20,6 +20,9 @@ body {
     background-color: #0f1b2d;
     color: white;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
 /* ===================== HEADER ===================== */
@@ -28,7 +31,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--color-principal);
+    background-color: #162033;
     padding: 1rem 2rem;
 }
 
@@ -36,8 +39,6 @@ body {
     display: flex;
     align-items: center;
     gap: 0.2rem;
-    font-family: 'Jaro', sans-serif;
-    
 }
 
 .header-logo img {
@@ -58,7 +59,7 @@ body {
 .header-nav a {
     text-decoration: none;
     color: white;
-    background-color: var(--color-secondary);
+    background-color: #1e3a5f;
     padding: 0.8rem 2rem;
     border-radius: 2rem;
     font-size: 1.4rem;
@@ -71,41 +72,40 @@ body {
 }
 
 .header-nav-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 1rem;
-      }
-
-      .header-nav-list li a {
-        display: inline-block;
-        padding: 1.75rem 2rem;
-        border-radius: 1rem;
-        text-decoration: none;
-        
-      }
-
-      .header-nav-list li a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: inherit;
-      }
-
-.header-search-item a {
-    background-color: transparent;
+    list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.header-nav-list li a {
+    display: inline-block;
+    padding: 1.75rem 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.header-nav-list li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: inherit;
 }
 
 /* ===================== LAYOUT BASE ===================== */
 
 .layout-main {
     display: flex;
-    min-height: calc(100vh - 6rem);
+    flex: 1;
+}
+
+main {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar {
     width: 18rem;
-    background-color: #162033;
     padding: 2rem;
     flex-shrink: 0;
 }
@@ -115,10 +115,9 @@ body {
     padding: 2rem;
 }
 
-
 .content .home-games-row {
     position: relative;
-    max-width: 100%; 
+    max-width: 95%; 
     margin: auto;
     overflow: hidden; 
     background-color: var(--color-bg); 
@@ -127,7 +126,7 @@ body {
 .content .home-games-row .carrusel-track {
     display: flex;
     width: max-content; 
-    animation: barraInfinitaHorizontal 20s linear infinite;
+    animation: sidemove 20s linear infinite;
     animation-play-state: paused; /* Quieto al cargar la página */
 }
 
@@ -140,7 +139,7 @@ body {
 .itemCarrousel {
     flex-shrink: 0; 
     width: 325px;  
-    height: 190px; 
+    height: 200px; 
     padding: 0 20px; 
     box-sizing: border-box;
 }
@@ -152,7 +151,7 @@ body {
     border-radius: 10px; 
 }
 
-@keyframes barraInfinitaHorizontal {
+@keyframes sidemove {
     0% {
         transform: translateX(0); 
     }
@@ -164,9 +163,10 @@ body {
 footer{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: var(--color-principal);
-    padding: 1rem 2rem;
+    justify-content:center;
+    background-color: var(--color-secondary);
+    padding: 0.5rem;
+    height: 2.2rem;
 }
 
 /*HECHO POR ALEJO*/
@@ -230,7 +230,6 @@ footer{
 .game-card img {
     width: 100%;
     height: 100%;
-    object-position: center;
     object-fit: cover;
     display: block;
 }
@@ -285,21 +284,21 @@ footer{
 .btn:hover {
     background-color: #2a5a8f;
 }
-
 /* ============================================================
    PANTALLA 1 - HOME (index.html)
    ============================================================ */
 
 .home-banner {
     display: flex;
-    flex-direction: columnyy;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-inline: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    height: 45rem;
 }
 
 .home-banner-featured {
     flex: 1;
-    height: 30rem;
     background-color: #1e3a5f;
     border-radius: 1rem;
     overflow: hidden;
@@ -309,34 +308,44 @@ footer{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block; 
+}
+
+.home-banner-featured:hover img {
+    transform: scale(1.1); 
 }
 
 .home-banner-info {
     width: 35rem;
+    height: 45rem; /* 💡 CLAVE: Sincroniza la altura con el banner principal */
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .home-banner-info-box {
     flex: 1;
-    background-color: #1e3a5f;
+    background-color: var(--color-bg);
     border-radius: 0.8rem;
-    padding: 1.5rem;
+    overflow: hidden; 
+    position: relative;
 }
 
-.home-games-row {
-    display: flex;
-    gap: 1.5rem;
+.home-banner-info-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.5s ease; /* Transición suave para las imágenes de la derecha */
 }
 
-.home-games-row .game-card {
-    flex: 1;
-    height: 15rem;
+.home-banner-info-box:hover img {
+    transform: scale(1.1);
 }
 
 /* ============================================================
-   PANTALLA 2 - PERFIL (perfil.html)
+   PANTALLA 2 - PERFIL (perfil.html) - CORREGIDO PARA EL BOCETO
    ============================================================ */
 
 .perfil-layout {
@@ -345,11 +354,11 @@ footer{
 }
 
 .perfil-sidebar {
-    width: 16rem;
+    width: 100%; /* Se adapta al contenedor sin desbordar */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .perfil-avatar {
@@ -367,35 +376,39 @@ footer{
 }
 
 .perfil-username {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: white;
+    font-weight: bold;
 }
 
 .perfil-info-label {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #aabbcc;
 }
 
 .perfil-logros {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     width: 100%;
 }
 
 .perfil-logros h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: white;
     margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
 }
 
 .logros-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.8rem;
+    width: 100%;
 }
 
 .logro-item {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 100%;
+    aspect-ratio: 1; /* Mantiene círculos perfectos sin importar la resolución */
     background-color: #1e3a5f;
     border-radius: 50%;
     overflow: hidden;
@@ -426,6 +439,24 @@ footer{
     color: #aabbcc;
     font-size: 1.4rem;
     cursor: pointer;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.perfil-tab.active {
+    color: white;
+    font-weight: bold;
+}
+
+/* Línea indicadora de pestaña seleccionada del boceto */
+.perfil-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1.2rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0078A3;
 }
 
 .perfil-tab img {
@@ -433,25 +464,26 @@ footer{
     height: 1.8rem;
 }
 
+/* Tarjetas de Posts Uniformes */
 .perfil-post {
     background-color: #1e3a5f;
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
     margin-bottom: 1.5rem;
 }
 
 .perfil-post-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .perfil-post-avatar {
     width: 4rem;
     height: 4rem;
     background-color: #2a4a70;
-    border-radius: 0.5rem;
+    border-radius: 50%; /* Cambiado a circular para armonía visual */
     overflow: hidden;
 }
 
@@ -464,9 +496,10 @@ footer{
 .perfil-post-name {
     font-size: 1.4rem;
     color: white;
+    font-weight: bold;
 }
 
-.perfil-post p {
+.perfil-post-text {
     font-size: 1.3rem;
     color: #ccddeeff;
     line-height: 1.6;
@@ -475,15 +508,27 @@ footer{
 .perfil-post-actions {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
+/* 💡 CORRECCIÓN: Botones visibles dentro de las tarjetas del perfil */
+.btn-perfil {
+    background-color: #2a4a70 !important; 
+    border: 1px solid #0078A3 !important;
+}
+
+.btn-perfil:hover {
+    background-color: #0078A3 !important;
+}
+
+/* 💡 CORRECCIÓN: Imagen expandida del Post 4 */
 .perfil-post-image {
-    width: 4rem;
-    height: 4rem;
+    width: 100%;
+    height: 24rem;
     background-color: #2a4a70;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     overflow: hidden;
+    margin-top: 1.2rem;
 }
 
 .perfil-post-image img {
@@ -491,106 +536,215 @@ footer{
     height: 100%;
     object-fit: cover;
 }
-
 /* ============================================================
-   PANTALLA 3 - TIENDA (tienda.html)
+   DISEÑO DE LA TIENDA (ESTRUCTURA DE 3 COLUMNAS DEL BOCETO)
    ============================================================ */
 
-.tienda-section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
+/* Contenedor general en 3 columnas */
+.tienda-layout {
+    display: grid;
+    grid-template-columns: 25rem 1fr 22rem; /* Sidebar, Tendencias (flexible), Ofertas */
+    gap: 2.5rem;
+    padding: 2rem;
 }
 
-.tienda-section-right {
+/* Títulos de las secciones */
+.section-title-box {
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #1e3a5f;
+    padding-bottom: 0.8rem;
 }
 
-.tienda-section-right img {
-    width: 2rem;
-    height: 2rem;
+/* --- SECCIÓN CENTRAL: TENDENCIAS --- */
+.tienda-central {
+    display: flex;
+    flex-direction: column;
 }
 
-.tienda-grid {
+.tienda-central .tienda-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de juegos grandes */
     gap: 1.5rem;
 }
 
-.tienda-grid .game-card {
-    height: 14rem;
+.tienda-central .game-card {
+    height: 16rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: var(--color-bg);
 }
 
+.tienda-central .game-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.tienda-central .game-card:hover img {
+    transform: scale(1.05);
+}
+
+/* --- SECCIÓN DERECHA: OFERTAS --- */
+.tienda-ofertas-sidebar {
+    background-color: var(--color-secondary); /* Fondo ligeramente oscuro para dar separación */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .sidebar-section .sidebar-item{
+    width: 22rem;
+}
+
+.ofertas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.game-card-oferta {
+    height: 10rem; /* Más pequeños y verticales como tu boceto */
+    border-radius: 0.8rem;
+    overflow: hidden;
+    background-color: var(--color-bg);
+}
+
+.game-card-oferta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.game-card-oferta:hover img {
+    transform: scale(1.1);
+}
 /* ============================================================
-   PANTALLA 4 - BIBLIOTECA (biblioteca.html)
+   DISEÑO DE LA BIBLIOTECA (ESTRUCTURA DE 3 COLUMNAS)
    ============================================================ */
 
+/* Contenedor principal que alinea las 3 columnas en la pantalla */
+.biblioteca-layout {
+    display: grid;
+    grid-template-columns: 25rem 1fr 22rem; /* Sidebar, Favoritos (flexible), Lista de deseos */
+    gap: 2.5rem;
+    padding: 2rem;
+}
+
+/* --- COLUMNA IZQUIERDA: SIDEBAR DE JUEGOS --- */
 .biblioteca-sidebar-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1.5rem;
 }
 
 .biblioteca-sidebar-list li {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
     font-size: 1.4rem;
     color: #ccddeeff;
     cursor: pointer;
 }
 
 .biblioteca-sidebar-list li img {
-    width: 2rem;
-    height: 2rem;
+    width: 3.2rem;
+    height: 3.2rem;
 }
 
-.biblioteca-header {
+/* --- COLUMNA CENTRAL: FAVORITOS --- */
+.biblioteca-central {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
+    flex-direction: column;
 }
 
-.biblioteca-header-right {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.biblioteca-header-right img {
-    width: 2rem;
-    height: 2rem;
-}
-
-.biblioteca-grid {
+.biblioteca-central .biblioteca-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr); /* Rejilla de 2 columnas de juegos */
+    gap: 1.5rem;
 }
 
-.biblioteca-grid .game-card {
-    height: 40rem;
+.biblioteca-central .game-card {
+    height: 14rem;
+    width: 100%;
+    overflow: hidden; /* Mantiene el zoom de la animación dentro de los bordes */
+    border-radius: 1rem;
+    background-color: #1e3a5f;
+}
+
+.biblioteca-central .game-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+/* Animación individual para las imágenes de Favoritos */
+.biblioteca-central .game-card:hover img {
+    transform: scale(1.05);
+}
+
+/* --- COLUMNA DERECHA: LISTA DE DESEOS --- */
+.biblioteca-deseos-sidebar {
+    background-color: #162033; /* Fondo oscuro idéntico al sidebar de ofertas */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.deseos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.game-card-deseo {
+    height: 10rem; /* Formato vertical compacto */
+    border-radius: 0.8rem;
+    overflow: hidden;
+    background-color: #1e3a5f;
+}
+
+.game-card-deseo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+/* Animación individual para las imágenes de Lista de deseos */
+.game-card-deseo:hover img {
+    transform: scale(1.1);
 }
 
 /* ============================================================
    PANTALLA 5 - DETALLE DE JUEGO (detalle.html)
    ============================================================ */
 
-.detalle-banner {
+.gif-main {
     width: 100%;
-    height: 28rem;
+    height: 65rem;
     background-color: #1e3a5f;
     border-radius: 1rem;
     overflow: hidden;
     margin-bottom: 2rem;
 }
 
-.detalle-banner img {
+.gif-main img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -634,8 +788,8 @@ footer{
 }
 
 .detalle-review-avatar {
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
     background-color: #1e3a5f;
     border-radius: 50%;
     overflow: hidden;
@@ -646,4 +800,8 @@ footer{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.detalle-reviews .detalle-review-avatar:hover img{
+    transform: scale(1.1);
 }
