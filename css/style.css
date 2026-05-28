@@ -617,24 +617,42 @@ footer{
     gap: 1.5rem;
 }
 
+/* El contenedor (la tarjeta) */
 .biblioteca-grid .game-card {
     height: 14rem;
+    width: 100%;
+    overflow: hidden; /* 💡 Mantiene la imagen recortada dentro de sus límites */
+    border-radius: 1rem; /* Opcional: si quieres que tus tarjetas tengan esquinas redondeadas */
+}
+
+/* La imagen dentro de la tarjeta */
+.biblioteca-grid .game-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 💡 Hace que la imagen llene la tarjeta sin deformarse */
+    display: block;
+    transition: transform 0.2s ease; /* Reducido a 0.2s para que sea más responsivo y rápido */
+}
+
+/* Al pasar el cursor sobre la tarjeta, afectamos a la imagen */
+.biblioteca-grid .game-card:hover img {
+    transform: scale(1.1); /* 💡 Corregido: 'img' sin la 's' */
 }
 
 /* ============================================================
    PANTALLA 5 - DETALLE DE JUEGO (detalle.html)
    ============================================================ */
 
-.detalle-banner {
+.gif-main {
     width: 100%;
-    height: 28rem;
+    height: 65rem;
     background-color: #1e3a5f;
     border-radius: 1rem;
     overflow: hidden;
     margin-bottom: 2rem;
 }
 
-.detalle-banner img {
+.gif-main img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -678,8 +696,8 @@ footer{
 }
 
 .detalle-review-avatar {
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
     background-color: #1e3a5f;
     border-radius: 50%;
     overflow: hidden;
@@ -690,4 +708,8 @@ footer{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.detalle-reviews .detalle-review-avatar:hover img{
+    transform: scale(1.1);
 }
