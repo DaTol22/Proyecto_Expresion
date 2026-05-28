@@ -1,66 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Expression-Project</title>
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+    <title>Axis - Detalle de juego</title>
+  </head>
 
-    <header>
-        <div class="logo-area">
-            <div class="logo-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            </div>
-            <span class="logo-text">AXIS</span>
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#" class="store">TIENDA</a></li>
-                <li><a href="#" class="library">BIBLIOTECA</a></li>
-                <li><a href="#" class="account">PERFIL</a></li>
-            </ul>
-        </nav>
+  <body>
 
-        <div class="search-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
-        </div>
+    <header class="header">
+      <div class="header-logo">
+        <img src="" alt="Logo Axis" />
+        <h1>AXIS</h1>
+      </div>
+      <nav class="header-nav">
+        <a href="#">Tienda</a>
+        <a href="#">Biblioteca</a>
+        <a href="#">Perfil</a>
+      </nav>
+      <div class="header-search">
+        <img src="" alt="Buscar" />
+      </div>
     </header>
 
-    <main class="container">
-        <section class="banner-frame">
-            <div class="banner-placeholder"></div>
-        </section>
+    <main>
+      <div class="content">
 
-        <section class="content-grid">
-            <div class="left-panel">
-                <div class="lorem-box">
-                    <h2>Lorem</h2>
-                </div>
-                <div class="profile-row">
-                    <div class="profile-avatar"></div>
-                    <div class="profile-avatar"></div>
-                    <div class="profile-avatar"></div>
-                    <div class="profile-avatar"></div>
-                </div>
-            </div>
+        <!-- Banner grande del juego -->
+        <div class="detalle-banner">
+          <img src="" alt="Banner del juego" />
+        </div>
 
-            <div class="right-panel">
-                <div class="description-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="help-btn">?</div>
-            </div>
-        </section>
+        <!-- Información del juego -->
+        <div class="detalle-info">
+          <div class="detalle-info-left">
+            <p>Lorem</p>
+          </div>
+          <div class="detalle-info-right">
+            <div class="detalle-info-bar"></div>
+            <div class="detalle-info-bar"></div>
+            <div class="detalle-info-bar"></div>
+            <div class="detalle-info-bar"></div>
+            <div class="detalle-info-bar"></div>
+          </div>
+        </div>
+
+        <!-- Reseñas de usuarios -->
+        <div class="detalle-reviews">
+          <div class="detalle-review-avatar">
+            <img src="" alt="Usuario 1" />
+          </div>
+          <div class="detalle-review-avatar">
+            <img src="" alt="Usuario 2" />
+          </div>
+          <div class="detalle-review-avatar">
+            <img src="" alt="Usuario 3" />
+          </div>
+          <div class="detalle-review-avatar">
+            <img src="" alt="Usuario 4" />
+          </div>
+        </div>
+
+      </div>
     </main>
 
-</body>
+    <div class="help-btn">?</div>
+
+  </body>
 </html>

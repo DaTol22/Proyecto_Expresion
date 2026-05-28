@@ -1,246 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AXIS - Biblioteca</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jaro&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Axis - Biblioteca</title>
+  </head>
 
-    <!-- Espacio reservado para el header del compañero -->
-    <div class="header-placeholder" aria-hidden="true">
-        <!-- Tu compañero coloca aquí el header con el logo y navegación -->
-    </div>
+  <body>
 
-    <!-- Layout de Biblioteca -->
-    <div class="biblioteca-layout">
+    <header class="header">
+      <div class="header-logo">
+        <img src="img/Gemini_Generated_Image_lyifvlyifvlyifvl-removebg-preview.png" alt="Logo Axis" />
+        <h1>AXIS</h1>
+      </div>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li><a href="#">TIENDA</a></li>
+          <li><a href="#">BIBLIOTECA</a></li>
+          <li><a href="#">PERFIL</a></li>
+          <li><a href="#"><div class="header-search">
+        <img src="img/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Buscar" />
+      </div></a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <!-- ===== SIDEBAR IZQUIERDO ===== -->
-        <aside class="biblioteca-sidebar">
+    <main class="layout-main">
 
-            <!-- Tabs de filtro -->
-            <ul class="biblioteca-tabs">
-                <li>
-                    <a href="#" class="biblioteca-tab active">
-                        <!-- Ícono A-Z -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M4 6h7M4 12h7M4 18h7M15 6l4 12M19 6l-4 12"/>
-                        </svg>
-                        Lorem (A a la Z)
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="biblioteca-tab">
-                        <!-- Ícono Favoritos -->
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                        </svg>
-                        Favoritos
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="biblioteca-tab">
-                        <!-- Ícono Lista de deseos -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                        </svg>
-                        Lista de Deseos
-                    </a>
-                </li>
-            </ul>
+      <!-- Sidebar: ordenamiento y lista de juegos -->
+      <aside class="sidebar">
+        <p class="sidebar-title">Juegos (A a la Z)</p>
+        <ul class="biblioteca-sidebar-list">
+          <li>
+            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
+            Minecraft
+          </li>
+          <li>
+            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
+            Minecraft
+          </li>
+          <li>
+            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
+            Minecraft
+          </li>
+          <li>
+            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
+            Minecraft
+          </li>
+          <li>
+            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
+            Minecraft
+          </li>
+          <li>
+            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
+            Minecraft
+          </li>
+          <li>
+            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
+            Minecraft
+          </li>
+          <li>
+            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
+            Minecraft
+          </li>
+          <li>
+            <img src="img/gamepad_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono juego" />
+            Minecraft
+          </li>
+        </ul>
+      </aside>
 
-            <!-- Lista de juegos -->
-            <ul class="games-list">
-                <!-- Cada ítem: icono placeholder + nombre -->
-                <li class="game-list-item selected">
-                    <div class="game-icon-placeholder">
-                        <!-- Espacio para el ícono del juego -->
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-                <li class="game-list-item">
-                    <div class="game-icon-placeholder">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-                    </div>
-                    <span class="game-list-name">Minecraft</span>
-                </li>
-            </ul>
-        </aside>
+      <!-- Contenido: favoritos y lista de deseos -->
+      <div class="content">
 
-        <!-- ===== PANEL PRINCIPAL ===== -->
-        <main class="biblioteca-main">
+        <div class="biblioteca-header">
+          <div class="section-title">
+            <img src="img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Favoritos icono" />
+            <span>FAVORITOS</span>
+          </div>
+          <div class="biblioteca-header-right">
+            <img src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Lista de deseos icono" />
+            <span>LISTA DE DESEOS</span>
+          </div>
+        </div>
 
-            <!-- Tabs superiores -->
-            <ul class="biblioteca-top-tabs">
-                <li>
-                    <a href="#" class="top-tab active">
-                        <!-- Ícono orden -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <path d="M4 6h7M4 12h7M4 18h7M15 6l4 12M19 6l-4 12"/>
-                        </svg>
-                        Lorem (A a la Z)
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="top-tab">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                        </svg>
-                        Favoritos
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="top-tab">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                        </svg>
-                        Lista de Deseos
-                    </a>
-                </li>
-            </ul>
+        <div class="biblioteca-grid">
+          <div class="game-card"><img src="img/game-9.webp" alt="Juego 1" /></div>
+          <div class="game-card"><img src="img/game-1.jpg" alt="Juego 2" /></div>
+          <div class="game-card"><img src="img/game-2.webp" alt="Juego 3" /></div>
+          <div class="game-card"><img src="img/game-3.jpg" alt="Juego 4" /></div>
+          <div class="game-card"><img src="img/game-4.jpg" alt="Juego 5" /></div>
+          <div class="game-card"><img src="img/game-7.webp" alt="Juego 6" /></div>
+          <div class="game-card"><img src="img/game-6.png" alt="Juego 7" /></div>
+          <div class="game-card"><img src="img/game-8.jpg" alt="Juego 8" /></div>
+        </div>
 
-            <!-- Grid de miniaturas -->
-            <div class="thumbnails-area">
-                <div class="thumbnails-grid">
+      </div>
+    </main>
 
-                    <!-- 9 espacios para miniaturas de juegos -->
-                    <div class="game-thumbnail">
-                        <!-- Espacio para miniatura del juego 1 -->
-                        <svg class="thumbnail-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 6H3a2 2 0 00-2 2v8a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5S14.67 12 15.5 12s1.5.67 1.5 1.5S16.33 15 15.5 15zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 10 18.5 10s1.5.67 1.5 1.5S19.33 12 18.5 12z"/>
-                        </svg>
-                        <span class="thumbnail-label">Miniatura 1</span>
-                    </div>
+    <div class="help-btn">?</div>
 
-                    <div class="game-thumbnail">
-                        <svg class="thumbnail-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 6H3a2 2 0 00-2 2v8a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5S14.67 12 15.5 12s1.5.67 1.5 1.5S16.33 15 15.5 15zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 10 18.5 10s1.5.67 1.5 1.5S19.33 12 18.5 12z"/>
-                        </svg>
-                        <span class="thumbnail-label">Miniatura 2</span>
-                    </div>
-
-                    <div class="game-thumbnail">
-                        <svg class="thumbnail-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 6H3a2 2 0 00-2 2v8a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5S14.67 12 15.5 12s1.5.67 1.5 1.5S16.33 15 15.5 15zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 10 18.5 10s1.5.67 1.5 1.5S19.33 12 18.5 12z"/>
-                        </svg>
-                        <span class="thumbnail-label">Miniatura 3</span>
-                    </div>
-
-                    <div class="game-thumbnail">
-                        <svg class="thumbnail-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 6H3a2 2 0 00-2 2v8a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5S14.67 12 15.5 12s1.5.67 1.5 1.5S16.33 15 15.5 15zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 10 18.5 10s1.5.67 1.5 1.5S19.33 12 18.5 12z"/>
-                        </svg>
-                        <span class="thumbnail-label">Miniatura 4</span>
-                    </div>
-
-                    <div class="game-thumbnail">
-                        <svg class="thumbnail-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 6H3a2 2 0 00-2 2v8a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5S14.67 12 15.5 12s1.5.67 1.5 1.5S16.33 15 15.5 15zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 10 18.5 10s1.5.67 1.5 1.5S19.33 12 18.5 12z"/>
-                        </svg>
-                        <span class="thumbnail-label">Miniatura 5</span>
-                    </div>
-
-                    <div class="game-thumbnail">
-                        <svg class="thumbnail-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 6H3a2 2 0 00-2 2v8a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5S14.67 12 15.5 12s1.5.67 1.5 1.5S16.33 15 15.5 15zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 10 18.5 10s1.5.67 1.5 1.5S19.33 12 18.5 12z"/>
-                        </svg>
-                        <span class="thumbnail-label">Miniatura 6</span>
-                    </div>
-
-                    <div class="game-thumbnail">
-                        <svg class="thumbnail-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 6H3a2 2 0 00-2 2v8a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5S14.67 12 15.5 12s1.5.67 1.5 1.5S16.33 15 15.5 15zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 10 18.5 10s1.5.67 1.5 1.5S19.33 12 18.5 12z"/>
-                        </svg>
-                        <span class="thumbnail-label">Miniatura 7</span>
-                    </div>
-
-                    <div class="game-thumbnail">
-                        <svg class="thumbnail-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 6H3a2 2 0 00-2 2v8a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5S14.67 12 15.5 12s1.5.67 1.5 1.5S16.33 15 15.5 15zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 10 18.5 10s1.5.67 1.5 1.5S19.33 12 18.5 12z"/>
-                        </svg>
-                        <span class="thumbnail-label">Miniatura 8</span>
-                    </div>
-
-                    <div class="game-thumbnail">
-                        <svg class="thumbnail-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M21 6H3a2 2 0 00-2 2v8a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-10 7H9v2H7v-2H5v-2h2V9h2v2h2v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5S14.67 12 15.5 12s1.5.67 1.5 1.5S16.33 15 15.5 15zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 10 18.5 10s1.5.67 1.5 1.5S19.33 12 18.5 12z"/>
-                        </svg>
-                        <span class="thumbnail-label">Miniatura 9</span>
-                    </div>
-
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <!-- Botón de ayuda flotante -->
-    <div class="help-float" title="Ayuda">?</div>
-
-</body>
+  </body>
 </html>
