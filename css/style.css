@@ -108,6 +108,62 @@ body {
     padding: 2rem;
 }
 
+
+.content .home-games-row {
+    position: relative;
+    max-width: 100%; 
+    margin: auto;
+    overflow: hidden; 
+    background-color: var(--color-bg); 
+}
+
+.content .home-games-row .carrusel-track {
+    display: flex;
+    width: max-content; 
+    animation: barraInfinitaHorizontal 20s linear infinite;
+    animation-play-state: paused; /* Quieto al cargar la página */
+}
+
+/* Activa la animación al pasar el cursor */
+.content .home-games-row:hover .carrusel-track {
+    animation-play-state: running;
+}
+
+/* Formato horizontal para las imágenes */
+.itemCarrousel {
+    flex-shrink: 0; 
+    width: 325px;  
+    height: 190px; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+
+.itemCarrousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+@keyframes barraInfinitaHorizontal {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-principal);
+    padding: 1rem 2rem;
+}
+
+/*HECHO POR ALEJO*/
+
 /* ===================== SIDEBAR ===================== */
 
 .sidebar-title {
@@ -228,6 +284,7 @@ body {
 
 .home-banner {
     display: flex;
+    flex-direction: columnyy;
     gap: 2rem;
     margin-bottom: 3rem;
 }
