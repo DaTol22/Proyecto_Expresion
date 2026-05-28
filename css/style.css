@@ -202,7 +202,7 @@ main {
     display: flex;
     width: max-content; 
     animation: sidemove 20s linear infinite;
-    animation-play-state: 
+    animation-play-state: paused;
 }
 
 .content .home-games-row:hover .carrusel-track {
